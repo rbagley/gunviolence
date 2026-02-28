@@ -4,7 +4,7 @@
 In order to replicate the matching process, see the README file in the preprocessing_pipeline folder.
 
 ## Processing
-Forthcoming
+To process the matched incidents and articles into csvs, see the README in the analysis folder.
 
 ## Linguistic Features
 Forthcoming
