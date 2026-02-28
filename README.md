@@ -1,2 +1,16 @@
 # Quantifying Racial Disparities in Media Representations of Gun Violence at Scale
-Code and data forthcoming for this paper in PNAS
+
+## Matching Process
+In order to replicate the matching process, see the README file in the preprocessing_pipeline folder.
+
+## Processing
+Forthcoming
+
+## Linguistic Features
+Forthcoming
+
+## Analysis and replication
+Forthcoming
+
+## LLM Comparison
+In order to compare predictive power of different LLMs on the masked and balanced dataset, go to "bert"
