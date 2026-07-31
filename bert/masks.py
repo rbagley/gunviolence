@@ -7,8 +7,8 @@ from spacy.matcher import DependencyMatcher
 csv.field_size_limit(sys.maxsize)
 nlp = spacy.load('en_core_web_lg')
 
-INPUT_DIR = "/projects/p31502/projects/gun_violence/community_justice/processed/"
-OUTPUT_DIR = "/projects/p31502/projects/gun_violence/community_justice/bert/masks/"
+INPUT_DIR = "/yourpath/processed/"
+OUTPUT_DIR = "/yourpath/bert/masks/"
 
 
 nouns=['prisoner','counterpart','teen','people','worker','member','kid','lawyer','victim','officer','wife','american','americans','neighbor','male','population','person','cop','woman','supremacist','family','community','church','mayor','boy','girl','mother','daughter','son','father','man','suspect','resident','teenager','parent','youth','child','leader','female','nationalism','supremacy','lives','life']
@@ -51,7 +51,6 @@ def get_data():
     print(year)
     data=[]
     directory = INPUT_DIR+year+'/article_data'
-    #directory = '/projects/p31502/projects/gun_violence/community_justice/processed_data/test1/article_data'
     for i,filename in enumerate(os.listdir(directory)):
       f = os.path.join(directory,filename)
       if os.path.isfile(f):# and i%4==segment:

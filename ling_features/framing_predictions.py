@@ -7,18 +7,13 @@ import numpy as np
 #import spacy
 #nlp = spacy.load('en_core_web_lg')
 print("B")
-IS_VIDEOS=False
 
-if IS_VIDEOS:
-  folder = "/projects/p31502/projects/gun_violence/community_justice/processed_videos/"
-  OUTPUT_DIR = "/projects/p31502/projects/gun_violence/community_justice/processed_videos/csvs/ling_features/"
-  masking_dir = "/projects/p31502/projects/gun_violence/community_justice/processed_videos/csvs/masking/"
-  path="/projects/p31502/projects/gun_violence/community_justice/bert/video_csvs/"
-else:
-  folder = "/projects/p31502/projects/gun_violence/community_justice/processed/"
-  OUTPUT_DIR = '/projects/p31502/projects/gun_violence/community_justice/analysis/ling_features/csvs/'
-  masking_dir = "/projects/p31502/projects/gun_violence/community_justice/processed/csvs/masking/"
-  path="/projects/p31502/projects/gun_violence/community_justice/bert/csvs/"
+
+folder = "/yourpath/processed/"
+OUTPUT_DIR = '/yourpath/ling_features/csvs/'
+masking_dir = "/yourpath/processed/csvs/masking/"
+path="/yourpath/bert/csvs/"
+outpath="yourpath/bert/regression/"
 
 police_words=['hero','savior','protector','superhero']  #,'guardian'
 
@@ -316,8 +311,7 @@ def log_odds(model='deberta'):
   
   std_scaler = StandardScaler()
   
-  inpath = "/projects/p31502/projects/gun_violence/community_justice/bert/csvs/"
-  outpath = "/projects/p31502/projects/gun_violence/community_justice/bert/regression/"
+  inpath = path
   
   role_features = {
     'family':['cousin','aunt', 'uncle', 'mother', 'father', 'mom', 'dad', 'sister','brother', 'son', 'daughter', 'grandmother','grandfather','niece','nephew','parent', 'wife', 'husband', 'boyfriend', 'girlfriend','fiance'],
@@ -451,7 +445,7 @@ def get_examples(model=''):
     'hero':police_words,
     'complex_person':family_words #complex_person_words
   }
-  inpath = "/projects/p31502/projects/gun_violence/community_justice/bert/csvs/"
+  inpath = path
   obj={} 
   for role in ['victim','police','shooter']: #'police',
     infile = inpath+"predictions_with_metadata_"+role+model+".csv"
@@ -492,7 +486,7 @@ def get_examples(model=''):
       obj[role+"_"+f+"_second"]=second
   examples=pd.DataFrame.from_dict(obj,orient='columns')
   print(examples.shape)
-  #examples.to_csv("/gpfs/projects/p31502/projects/gun_violence/community_justice/bert/csvs/"+model+"_examples.csv",index=False)
+  #examples.to_csv(path+model+"_examples.csv",index=False)
     #print(f)
     #print("TOP")
     #print("\n".join(list(top)))

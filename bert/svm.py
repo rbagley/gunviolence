@@ -11,10 +11,10 @@ epochs=3
 print("Model: ",model_id)
 print("Epochs: ",epochs)
 
-inpath="/projects/p31502/projects/gun_violence/community_justice/processed/"
-outpath="/projects/p31502/projects/gun_violence/community_justice/bert/rerun/"
-mask_folder="/projects/p31502/projects/gun_violence/community_justice/bert/masks/"
-csv_with_race_info= "/gpfs/projects/p31502/projects/gun_violence/community_justice/analysis/regression/revisions/csvs/flipped_regression.csv"
+inpath="/yourpath/processed/"
+outpath="/yourpath/bert/rerun/"
+mask_folder="/your/bert/masks/"
+csv_with_race_info= "/yourpath/processed/articles_with_updated_census_data.csv"
 
 def extract_piece(t):
   words = t.split(" ")

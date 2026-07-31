@@ -1,0 +1,10 @@
+1	care.virtue
+2	care.vice
+3	fairness.virtue
+4	fairness.vice
+5	loyalty.virtue
+6	loyalty.vice
+7	authority.virtue
+8	authority.vice
+9	sanctity.virtue
+10	sanctity.vice

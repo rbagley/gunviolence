@@ -5,8 +5,8 @@ import numpy as np
 
 ignore_frequency=False
 
-inpath="/projects/p31502/projects/gun_violence/community_justice/processed/"
-outpath='/projects/p31502/projects/gun_violence/community_justice/subset_curation/'
+inpath="/yourpath/processed/"
+outpath='/yourpath/subset_curation/'
 
 few_chars=['major','low_death','year']
 all_chars=['major','low_death','year','officer','drug','gang','suicide','mass','accident','assaultweapon','domestic_violence','school']
